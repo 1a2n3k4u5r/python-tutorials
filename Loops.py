@@ -211,3 +211,49 @@ for i in range(1, 100, 2):
 
  for i in range(2, 100, 2): 
     print(i) # for  print even no 
+
+
+ # print number from 1 to 100
+ for i in range(1, 101): 
+    print(i)
+
+
+# print number from 100 to 1
+ for i in range(100, 0, -1): 
+    print(i)
+
+ # Print the multiplaction table of a number n   
+n = int(input("enter number : "))
+ 
+for i in range(1,11):
+     print(n * i)
+
+
+# pass Statement
+# pass is a null statement that does nothing. it is used as a placeholder for future code
+
+# for el in range(10):
+# pass
+
+for i in range(5):
+    pass
+if i > 5:
+    pass
+print("some useful work")
+
+# write a program to find the sum of first n natural number.
+n = 5
+
+sum = 0
+for i in range(1, n+1):
+    sum += i
+
+print("total sum =", sum)
+
+# Write a program to find the factorial of first n number(using for)
+n = 5
+fact = 1
+
+for i in range(1, n+1):
+    fact *= 1
+print("factorial =", fact)
