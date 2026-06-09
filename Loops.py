@@ -63,7 +63,7 @@ while i < len(nums):
 
     #traverse meaning travell karna har ek element par            
 
-# Search for a number x in this tupke using loop:
+# Search for a number x in this tuple using loop:
 
 nums = [1,4,9,16,25,36,49,64,81,100]
 
@@ -74,3 +74,140 @@ while i < len(nums):
     if(nums[i] ==x):
         print("FOUND at idx", i)
     i +=1
+else:
+    print("finding..")  
+
+
+# Break & Continue  in Loop
+
+# Break: used to terminate the loop when encountered.
+
+# Continue: terminate execution in the currrent iteration & continue execution of the loop with the next iteraion.
+
+# examples of Break
+i = 1
+while i <=5 :
+    print(i)
+    if(i == 3):
+        break
+    i += 1
+
+print("end of loop") #output = 1, 2,3 end of loop
+
+
+nums = [1,4,9,16,25,36,49,64,81,100]
+
+x = 36
+
+i = 0
+while i < len(nums):
+    if(nums[i] ==x):
+        print("FOUND at idx", i)
+        break
+    else: 
+        print("finding..")
+    i += 1
+
+print("end of loop")
+
+# examples of Continue
+
+i = 0
+while i <= 5:
+    if(i == 3):
+        i +=1
+        continue #skip
+    print(i)
+    i +=1 #output = 0, 1, 2, 4, 5.
+
+# for loops in python
+# loops are used for sequential traversal. For traversing list,string,tuples etc.
+
+# list = [1, 2, 3]
+#   for el in list:
+#     print(el)
+
+#example
+veggies = ["potato", "brinjal", "ladyfinger", "cucumber"]
+
+for val in veggies:
+    print(val) #output = potato,brinjal,ladyfinger,cucumber.
+
+
+# for loop with else
+# for el in list:
+#     print(el)
+# else:
+#     print("END")
+
+str = "apnacollege"
+
+for char in str:
+    print(char)
+else:
+    print("END")
+
+    # OR
+
+    str = "apnacollege"
+
+for char in str:
+    if(char == 'o'):
+        print("o found")
+        break
+    print(char)
+else:
+    print("END")
+
+
+# Print the elements of the following list using a loop [1,4,9,16,25,36,49,64,81,100]
+
+nums = [1,4,9,16,25,36,49,64,81,100]
+
+for el in nums:
+    print(el)
+
+# Search for a number x in this tuple using loop:
+
+nums = [1,4,9,16,25,36,49,64,81,100,49]
+x = 49
+
+idx = 0
+for el in nums:
+    if(el == x):
+        print("number found at idx", idx)
+    idx +=1
+
+
+# ****IMPORTANT****
+ # RANGE
+#  Range function returns a sequence of numbers,starting from 0 by default, and increments by 1(by default), and stops before a specified number
+# range(start?,stop,step?)
+# for el in range(5):
+#     print(el)
+# for el in range(1,5):
+#     print(el)
+# for el in range(1, 5, 2):
+#     print(el)
+
+seq = range(10)
+
+for i in seq:
+    print(i) # it canot consider the last number
+
+
+# for i in range(10):  #range(stop)
+#     print(i)
+
+# for i in range(2, 10) : #range(start, stop)
+#     print(i)
+
+
+for i in range(1, 100, 2): #range(start, stop, step)
+    print(i)
+
+for i in range(1, 100, 2): 
+ print(i) # for  print odd no
+
+ for i in range(2, 100, 2): 
+    print(i) # for  print even no 
