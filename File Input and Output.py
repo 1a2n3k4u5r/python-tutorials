@@ -33,12 +33,16 @@ f.close()
 # 'b' - binary Mode 
 # 't' - text mode (default)
 # '+' - open a disk file for updating(reading and writing)
-# 'r+' - both read and write in the file.
-# 'w+' - both write and read in the file.
-# 'a+' - both append and read in the file.
+# 'r+' - read and write in the file, in this file is  not truncate, the stream is positioned at the begining of the file, in this mode file is overwrite at the begining.
+# 'w+' - both write and read in the file ,in this mode file is truncate means file data is deleted .
+# 'a+' - both append and read in the file, stream is positioned at the end of file, it is not truncate.
+
+
 
 
 #  **** Reading a file ****
+
+
 
 #data = f.read()  # reads entire file
 #data = f.readline() # reads one line at a time
@@ -64,7 +68,11 @@ f.close()
 # Python from ApnaCollege.
 
 
+
 # **** Writing to a file ****
+
+
+
 f = open("demo.txt","w")
 f.write("this is a new line") # "overwrites the entire file"
 
@@ -80,3 +88,69 @@ f.close()
 
 f = open("sample.txt", "a")
 f.close() # use to create a file.
+
+# example of r+.
+f = open("demo.txt", "r+")
+f.write("abc")
+f.close()
+
+
+
+
+# with Syntax
+with open("demo.txt","r") as f:
+    data = f.read()
+    print(data)
+
+# where f = alias(nickname)
+# when we use a with syntax we don't need to use f.close()
+
+
+
+# DELETING A FILE
+
+
+# using the os module (where os is operating system).
+# Module( like a code library)is a file written by another programmer that generally has a function we can use.
+# for install new module = we use (pip install_)
+#for version check = (pip3 install_) 
+
+# import os
+# os.remove()
+
+
+
+# Practice question
+# Create a new file "practice.txt" using python. Add the following data in it:
+ # Hi everyone
+ # we are learning file input and output
+ # using java
+ # I like programming in java.
+
+
+with open("practice.txt","w") as f:
+   f.write("Hi everyone \n we are learning file input and output \n")
+   f.write("using Java. \n I like programming in Java.")
+
+   # Write a function that replace all occurences of "java" with "python" in above file.
+
+with open("practice.txt","r") as f:
+   data = f.read()
+
+new_data = data.replace("Java", "Python")
+print(new_data)
+
+with open("practice.txt","w") as f:
+    f.write(new_data)
+
+
+# Search if the word "learning" exists in the file or not.
+
+word = "learning"
+with open("practice.txt","r") as f:
+   data = f.read()
+   if(data.find(word) != -1):
+      print("Found")
+   else:
+      print("not found")
+
