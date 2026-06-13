@@ -15,7 +15,7 @@ s1 = Student("ankur") # here paranthesis is used to call the constructor
 print(s1.name) #output = ankur
  # Self is the first parameter in the constructor which is the argument
 
-# NOTE = The (self) parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class.
+# NOTE = The (self) parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class,self is object reference.
 # the data that is stored inside the class or inside the object  is calle attributes.
 
 # Example
