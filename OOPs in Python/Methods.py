@@ -151,3 +151,181 @@ print(acc1.acc_no)
 print(acc1.acc_pass)
 
 # To make any attribute private we use a two Underscore(__).
+
+
+# **** Inheritance ****
+# When one class(child/derived) derives the properties & methods of another class(parent/base).
+
+class Car:
+   @staticmethod
+   def start():
+      print("car started..")
+
+   @staticmethod
+   def stop():
+      print("car stopped.")
+
+class ToyotaCar(Car):
+   def __init__(self, name):
+      self.name = name
+
+car1 = ToyotaCar("fortuner")
+car2 = ToyotaCar("prius")
+
+print(car1.name) #fortuner
+
+# *** TYpes of inheritance 
+# 1) Single inheritance.
+# 2) Multi-level inheritance.
+# 3) Multiple inheritance
+
+# Example of Multi-level inheritance
+class Car:
+   @staticmethod
+   def start():
+      print("car started..")
+
+   @staticmethod
+   def stop():
+      print("car stopped.")
+
+class ToyotaCar(Car):
+   def __init__(self, brand):
+      self.name = brand
+
+class Fortuner(ToyotaCar):
+   def __init__(self, type):
+      self.name = type
+
+car1 = Fortuner("dieset")
+car1.start() #car started..
+
+#Example of Multiple inheritance
+class A :
+   varA = "welcome to class A"
+
+class B : 
+   varB = "welcome to class B"
+
+class C(A, B) : 
+   varC = "welcome to class C"
+
+c1 = C()
+
+print(c1.varC)
+print(c1.varB)
+print(c1.varA)
+
+
+# **** Super method ****
+# super()method is used to access methods of the parent class.
+# Har ek new instance ka liya or har ek new object ka liya vo method bar bar create nhi hoga vo method puri class ka liya common rhaga or shari object ka liya ek bar method create hoga or har ek object usa use kar sakta hai kuyki static method instance attribute ko change karta hi nhi or na hi unha excess karta to usa jarurat hi nhi ha bar bar create hona ka.
+ 
+class Car:
+   def __init__(self,type):
+      self.type = type
+
+   @staticmethod
+   def start():
+      print("car started..")
+
+   @staticmethod
+   def stop():
+      print("car stopped.")
+
+
+class ToyotaCar(Car):
+   def __init__(self, name, type):
+      
+      self.name = name
+      super().__init__(type)
+
+car1 = ToyotaCar("prius","electric")
+print(car1.type)
+
+
+# **** class method **** 
+# A class method is bound to the class & receives the classs as an implicit first argument.
+
+ # NOTE = static method can't access or modify class state & generally for utility.
+
+class Student:
+   @classmethod #decorator
+   def college(cls):
+      pass
+   
+
+# EXample of static
+class Person:
+   
+   def changeName(self, name): #self = object
+      self.__class__.name = "Rahul"
+
+p1 = Person()
+p1.changeName("rahul kumar")
+print(p1.name)
+print(Person.name)
+
+
+
+#Example of class method
+class Person:
+   name = "anonymous" 
+
+   @classmethod
+   def changeName(cls, name):
+      cls.name = name
+
+p1 = Person()
+p1.changeName("rahul kumar")
+print(p1.name)
+print(Person.name)
+
+# Write a program in which find a percentage after changing in marks
+
+class Student:
+   def __init__(self,phy,chem,math):
+      self.phy = phy
+      self.chem = chem
+      self.math = math
+      self.percentage = str((self.phy + self.chem +self.math) /3) + "%"
+
+   def calcPercentage(self):
+      self.percentage = str((self.phy + self.chem +self.math) /3) + "%"
+
+stu1 = Student(98, 97, 99)
+print(stu1.percentage)
+
+stu1.phy = 86
+print(stu1.phy)
+stu1.calcPercentage()
+print(stu1.percentage)
+# 98.0%
+# 86
+# 94.0%
+
+#  **** Property ****
+
+
+# We use @property decorator on any method in the class to use the method as  a property.
+
+# Solve the upper problem using the property decorator
+class Student:
+   def __init__(self,phy,chem,math):
+      self.phy = phy
+      self.chem = chem
+      self.math = math
+
+
+@property
+def percentage(self):
+         return str((self.phy + self.chem +self.math) /3) + "%"
+
+stu1 = Student(98, 97, 99)
+print(stu1.percentage)
+
+stu1.phy = 86
+print(stu1.percentage)
+
+
+# **** Polymorphism: Operator Overloading
