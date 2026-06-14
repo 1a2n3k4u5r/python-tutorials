@@ -311,15 +311,15 @@ print(stu1.percentage)
 
 # Solve the upper problem using the property decorator
 class Student:
-   def __init__(self,phy,chem,math):
-      self.phy = phy
-      self.chem = chem
-      self.math = math
+    def __init__(self, phy, chem, math):
+        self.phy = phy
+        self.chem = chem
+        self.math = math
 
+    @property
+    def percentage(self):
+        return str((self.phy + self.chem + self.math) / 3) + "%"
 
-@property
-def percentage(self):
-         return str((self.phy + self.chem +self.math) /3) + "%"
 
 stu1 = Student(98, 97, 99)
 print(stu1.percentage)
@@ -327,8 +327,43 @@ print(stu1.percentage)
 stu1.phy = 86
 print(stu1.percentage)
 
+# **** Polymorphism: Operator Overloading ***
 
-# **** Polymorphism: Operator Overloading
+# When the same operator is allowed to have different meaning according to the context.
+# Operators and Dunder functions.
 
 
-When the 
+#Example
+print(1 + 2) #3
+print(type(1))
+
+print("apna" + "college") #concatenate
+print(type("apna"))
+
+print([1, 2, 3] + [4, 5, 6]) #merge
+print(type([1, 2, 3]))
+
+# Print the complex number.
+class Complex:
+   def __init__(self, real, img):
+      self.real = real
+      self.img = img
+
+   def showNumber(self):
+      print(self.real,"i +", self.img,"j")
+
+   def add(self,num2):
+      newReal = self.real + num2.real
+      newImg = self.img + num2.img
+      return Complex(newReal, newImg)
+
+num1 = Complex(1,3)
+num1.showNumber()
+
+num2 = Complex(4,6)
+num2.showNumber()
+#1 i + 3 j
+# 4 i + 6 j
+
+num3 = num1.add(num2)
+num3.showNumber()  #5 i + 9 j
