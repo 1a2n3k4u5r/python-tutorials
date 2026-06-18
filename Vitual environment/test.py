@@ -2,9 +2,11 @@ import pandas as pd
 
 print("Pandas version:", pd.__version__)
 
-df = pd.DataFrame({
+data = {
     "Name": ["Ankur", "Rahul"],
     "Age": [20, 21]
-})
+}
 
-print(df) 
+df = pd.DataFrame(data)
+
+print(df)
