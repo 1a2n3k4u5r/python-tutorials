@@ -1,9 +1,131 @@
 {
  "cells": [
   {
+   "cell_type": "markdown",
+   "id": "9a6244e3-8ed4-4c67-9b51-cddb27279327",
+   "metadata": {},
+   "source": [
+    "# Welcome to numpy tutorial\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "994832cb-d8c0-4502-a6a7-255401da0c8c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "c229c787-476c-481a-95a3-7096b7beef4c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    " myarr = np.array([[3, 6, 32, 7]], np.int64)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "4e8614bf-aa14-4070-bed7-aea9232fd099",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "np.int64(6)"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "myarr[0,1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "be033e44-b9d2-4ab5-bcd7-e5e00ae9efcc",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(1, 4)"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "myarr.shape\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "59eab88e-bdf9-4f82-a7c1-8b352e02bd61",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dtype('int64')"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "myarr.dtype"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "733576d9-10ff-43f1-9d12-4b7636dc7050",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "myarr[0, 1] = 45\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "16965a7e-9bd1-40a5-90b8-bca2b8e361d2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[ 3, 45, 32,  7]])"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "myarr"
+   ]
+  },
+  {
    "cell_type": "code",
    "execution_count": null,
-   "id": "9a6244e3-8ed4-4c67-9b51-cddb27279327",
+   "id": "18b1f307-27bc-4544-a003-31a90e19ef82",
    "metadata": {},
    "outputs": [],
    "source": []
