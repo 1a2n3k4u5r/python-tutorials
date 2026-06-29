@@ -80,3 +80,16 @@
 
 # ide.shape
 #(45,45)
+
+# arr = np.arange(99)
+# arr
+# output are = array([0,1,2,3,4,5,6,7,8,9..................98])
+
+
+# arr.reshape(3,33) yha par 3*33 element milta ha. or yha par reshape nhi hoga.
+
+# arr = arr.reshape(3,33) yha par reshape ho jayga.
+# arr
+
+
+# arr.ravel() yha par array ekdum sidha hojayga or 1-D array banjayga
