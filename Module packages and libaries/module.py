@@ -81,3 +81,8 @@ print(random.randint(1, 100))  # Random number between 1 and 100
  
 import math
 print(dir(math)) # output = ['acos', 'asin', 'atan', 'ceil', 'cos', 'degrees','factorial', 'floor', 'pi', 'pow', 'sqrt', ...]
+
+# module is a type of code which is written by another we use it directly into our programm.
+# A python module is like a toolbox filled with special tools(codes).
+
+# A python REPL lets you run code line by line and see result instant!. (REPL = Read Evaluate print Loop).

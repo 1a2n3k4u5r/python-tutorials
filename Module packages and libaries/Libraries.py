@@ -3,7 +3,7 @@
 # A library is a collection of module and packages that provide pre-written functionality for your program.>libraries are typically larger and more feature-rich than package or modules.
 
 # why use libraries?
-# To avoid writing cpmmon functionality from scratch.
+# To avoid writing common functionality from scratch.
 # To leverage powerful tools developed by the community.
 
 #Example : python has many popular libraries such as:
