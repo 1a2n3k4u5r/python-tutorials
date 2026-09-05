@@ -2,6 +2,8 @@
 # string formatting means inserting values into strings in a clean and readable way.
 # In Python, string formatting means inserting values into strings in a clean and readable way.
 
+#NOTE = String are immutable it cannot change when it created.
+
 # F-Strings
 # F-String allows you to format selected parts of a string.
 # To specify a string as an f-string, simply put an f in front of the string literal, like this:
@@ -99,3 +101,57 @@ print(myorder.format(quantity, itemno, price))   # I want 3 pieces of item numbe
 
 myorder = "I have a {carname}, it is a {model}."
 print(myorder.format(carname = "Ford", model = "Mustang")) # I have a Ford, it is a Mustang.
+
+
+# String slicing in pythok ocabe used tio silicing for geeting a part of strings
+# postive silicing are start with " 0 " but negative silicing are start with '-1' and from right.
+
+name = "Harry"
+
+print(name[0:3])
+
+print(name[-4: -1])
+print(name[1:4])
+
+print(name[:4]) # is same as print(name[0:4])
+print(name[1:]) # is same as print(name[1:5])
+print(name[1:5])
+
+
+# Slicing with skip value
+# We can provide a skip value as a part of our slice like this :
+#  word = "amazing"
+# word[1: 6: 2]  # "mzn"
+
+# Other advanced silicing technique:
+
+word = "amazing"
+  #word = [:7] # word [0:7] - 'amazing'
+ # word = [0:] # word [0:7] - 'amazing'
+
+
+# There are many string methods:
+print(len(name))
+print(name.endswith("rry"))
+print(name.startswith("Ha"))
+print(name.capitalize()) # This function capitalize the first character of a given string.
+
+# String.find(word) - This function friends a word and returns the index of first occurrence that word in the string.
+
+# String.replace(Old Word, new Word) - This function reoplace the old word with new word in the entire string.
+
+# String.count("c")- counts the total number of occurrences of any character.
+
+
+
+# ***** Escape Sequence characters *****
+
+# Sequence of characters after backslash "\". Escape Sequence characters.
+
+# Escape Sequence characters comprise of more than one character but represent one character when used within the strings.
+ 
+a = 'Harry is a good boy\nbut not a bad \'boy\ '
+
+print(a)
+
+# There are many types of esape sequence character = \n,\t,\',\\ where \n = neewline , \t = tab, \' = singlequote, \\ = backslash .
