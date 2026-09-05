@@ -14,3 +14,9 @@ print(type(collection))  #output = {'world', 1, 2, 'hello'} ,  <class 'set'>
 collection = set()
 print(type(collection)) #output = <class 'set'>
 
+#NOTE = Both are made using curly braces
+
+# To create an Empty set
+ #s = {1, 5, 32}
+
+e = set() # Dont use s = {} as it will create an empty dictionary

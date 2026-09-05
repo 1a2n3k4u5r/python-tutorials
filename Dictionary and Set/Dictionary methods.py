@@ -69,3 +69,5 @@ student = {
 new_dict = {"name" : "neha kumar", "age": 16}
 student.update(new_dict)
 print(student) #output = {'name': 'neha kumar', 'subjects': {'phy': 97, 'chem': 98, 'math': 95}, 'age': 16}
+
+# a.get("name") : Returns the value of the specified keys(and value is returned eg."harry" is returned here).

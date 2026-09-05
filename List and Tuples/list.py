@@ -12,7 +12,7 @@ print(len(marks))
 #  87.5 
 # 5
  
- # It can store elements of different typeas(integer, float, string, etc)
+ # It can store elements of different types(integer, float, string, etc)
 
 student = ["ankur", 95.4, 17, "Agra"]
 print(student)
