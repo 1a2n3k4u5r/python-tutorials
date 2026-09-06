@@ -2,7 +2,7 @@
 # RAM is a volatile memory,fast in execution,data is not permanentely stored.
 # For permanently stored information we stored in the form of files.
 
-# Tyoes of all files.
+# Types of all files.
 # 1) Text Files:.txt,.docx,.log etc. or data is stored in the form of character
 # 2) Binary Files:.mp4,.mov,.png,.jpeg etc.
 
